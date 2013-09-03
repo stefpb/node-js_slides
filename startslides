@@ -1,0 +1,1 @@
+sed 's/nextslide/  \n  \n<pre>\n\n\n\n\n\n\n\n\n\n\n\n<pre>\n  \n/' README.md | pandoc -s -f markdown -t html | elinks -dump -dump-color-mode 1 | less

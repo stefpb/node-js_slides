@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <form action="." method="post">
+    <% for (var question in questions ) { %>
+    	<%= questions[question] %><br>
+		<input type="text" name="q"><br>
+   	<% } %>
+   	<input type="submit">
+   	</form>
+   	<hr>
+    <% for (var answer in answers ) { %>
+    <% for (var question in questions ) { %>
+		<%= questions[question] %>:<br>
+		<%= answers[answer][question] %><br><br>
+   	<% } %>
+   	<hr>
+   	<% } %>
+
+  </body>
+</html>
